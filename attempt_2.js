@@ -8,7 +8,8 @@ node -e 'require("./attempt_1").isPalindrome("INSERT STRING HERE")'
 module.exports.isPalindrome = function (string) {
 	console.log(`You are checking to see if "${string}" is a palindrome without using string manipulation. Aren't you a fancy pants developer!.`);
 
-	const stringArray = string.split('');
+	// OK maybe only a little string manipulation. 
+	const stringArray = string.toLowerCase().split('');
 
 	const filteredArray = stringArray.filter((e) => {
 		return e !== " " && e !== ",";
