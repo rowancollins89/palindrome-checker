@@ -14,18 +14,8 @@ module.exports.isPalindrome = function (string) {
 		return e !== " " && e !== ",";
 	});
 
-	const firstHalf = filteredArray.slice(0, filteredArray.length / 2);
-	let secondHalf = filteredArray.slice(filteredArray.length / 2);
 
-
-	if (firstHalf.length !== secondHalf.length) {
-		secondHalf = secondHalf.slice(1);
-	}
-
-	const secondHalfReversed = secondHalf.reverse()
-
-
-	if (firstHalf.toString() !== secondHalfReversed.toString()) {
+	if (filteredArray.join('') !== filteredArray.reverse().join('')) {
 		return console.log("Get outta here! Do you even know what a palindrome is?");
 	}
 
