@@ -35,18 +35,19 @@ module.exports.isPalindrome = function (string) {
         X:'x',
         Y:'y',
         Z:'z',
+        ',':'',
+        ' ':'',
+        '.':'',
+        ';':'',
+        ':':'',
+        '?':'',
 	}
 
 
 	const stringArray = Array.from(string);
 
-	// remove the spaces and commas
-	let filteredArray = stringArray.filter((e) => {
-		return e !== " " && e !== ",";
-	});
-
-	// convert to lowecase
-	filteredArray = filteredArray.map((e) => {
+	// convert to lowecase and remove punctuation
+	filteredArray = stringArray.map((e) => {
 		if (typeof caseComparison[e] === 'string') {
 			return e = caseComparison[e];
 		}
