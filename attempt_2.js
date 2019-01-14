@@ -48,7 +48,6 @@ module.exports.isPalindrome = function (string) {
 	// convert to lowecase
 	filteredArray = filteredArray.map((e) => {
 		if (typeof caseComparison[e] === 'string') {
-			console.log(typeof caseComparison[e])
 			return e = caseComparison[e];
 		}
 		return e;
